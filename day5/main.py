@@ -23,6 +23,8 @@ def main():
             seatIds.append(total)
     
     seatIds.sort()
+
+    for seat in seatIds:
     print(seatIds)
         
 if __name__ == "__main__":
