@@ -32,11 +32,10 @@ def process_lines(lines, switch_index):
     total = 0
     while True:
         if index >= last_index:
-            print('index is too large', index)
+            print('index is later')
             return False
         (new_index, new_total) = process_line(index, lines[index], total, switch_index)
         if new_index in lines_processed:
-            print(lines_processed)
             print('Repeated index', new_index)
             return False
 
@@ -65,6 +64,7 @@ def main():
             print("testing index", s)
             print("+++++++++++++++")
             result = process_lines(lines, s)
+            print(result)
             print("+++++++++++++++")
             if result:
                 print(result)
